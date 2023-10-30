@@ -2,6 +2,7 @@ package com.employee.Employee.model;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.hibernate.annotations.Immutable;
@@ -11,6 +12,7 @@ import org.hibernate.annotations.Immutable;
 @NoArgsConstructor
 @Entity
 @Table(name = "employee_table")
+@Builder
 public class EmployeeEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)

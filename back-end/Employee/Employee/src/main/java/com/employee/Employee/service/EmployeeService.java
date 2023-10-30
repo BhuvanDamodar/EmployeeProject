@@ -20,4 +20,6 @@ public interface EmployeeService {
     List<EmployeeEntity> getEmployeeByName(String employeeName);
 
     List<EmployeeEntity> getEmployeeByEmployerName(String employer);
+
+    List<EmployeeEntity> findAllEmployeeHasAgeAbove30();
 }

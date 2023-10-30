@@ -55,6 +55,11 @@ public class EmployeeController {
         final List<EmployeeEntity> foundEmployees = employeeService.getEmployeeByName(employeeName);
         return new ResponseEntity<>(foundEmployees, HttpStatus.OK);
     }
+    @GetMapping("/age/30")
+    public ResponseEntity<List<EmployeeEntity>> findAllEmployeeHasAgeAbove30(){
+        final List<EmployeeEntity> foundEmployees = employeeService.findAllEmployeeHasAgeAbove30();
+        return new ResponseEntity<>(foundEmployees, HttpStatus.OK);
+    }
 
     @GetMapping("/employer/{employer}")
     public ResponseEntity<List<EmployeeEntity>> getEmployeeByEmployerName(@PathVariable String employer){
@@ -77,4 +82,9 @@ public class EmployeeController {
         EmployeeEntity updatedEmployee = employeeService.create(employee);
         return new ResponseEntity<>(updatedEmployee, HttpStatus.OK);
     }
+
+
+
 }
+
+

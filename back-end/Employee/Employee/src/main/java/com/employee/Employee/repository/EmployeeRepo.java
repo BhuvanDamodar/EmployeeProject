@@ -15,5 +15,6 @@ public interface EmployeeRepo extends JpaRepository<EmployeeEntity, Long> {
 
     List<EmployeeEntity> findByEmployer(String employer);
 
-//    EmployeeEntity findByEmployeeId(Long id);
+    @Query(value = "select * from employee_table where age > 30", nativeQuery = true)
+    List<EmployeeEntity> findAllEmployeeAgeAbove30();
 }

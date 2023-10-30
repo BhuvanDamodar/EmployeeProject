@@ -53,4 +53,9 @@ public class EmployeeServiceImpl implements EmployeeService {
     public List<EmployeeEntity> getEmployeeByEmployerName(String employer) {
         return employeeRepo.findByEmployer(employer);
     }
+
+    @Override
+    public List<EmployeeEntity> findAllEmployeeHasAgeAbove30() {
+        return employeeRepo.findAllEmployeeAgeAbove30();
+    }
 }
